@@ -3,7 +3,7 @@ import os
 import re
 
 # Specify the directory
-directory = 'ascii_2'
+directory = 'ascii'
 
 # List all files in the directory
 file_list = [f for f in os.listdir(directory) if os.path.isfile(os.path.join(directory, f))]
@@ -19,7 +19,7 @@ def print_files(files):
             print(f"Error: {file} not found.")
         
         # Wait for 0.1 seconds before moving to the next file
-        time.sleep(0.1)
+        time.sleep(0.035)
 
 # Call the function with the list of files
 print_files(sorted_img_list)
