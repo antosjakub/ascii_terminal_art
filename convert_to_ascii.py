@@ -1,6 +1,7 @@
 import os
 import re
 from PIL import Image
+import sys
 
 # ASCII characters used for intensity levels, from darkest to lightest
 ASCII_CHARS = ["@", "#", "S", "%", "?", "*", "+", ";", ":", ",", "."]
@@ -48,9 +49,10 @@ def image_to_ascii(image_path, output_path="output.txt", new_width=100):
 
     print(f"ASCII art saved to {output_path}")
 
-# Specify the directory
-directory = 'rick_imgs'
-output_dir = 'ascii'
+# Specify the directories
+directory = sys.argv[1]  # dir with .pngs source files
+output_dir = sys.argv[2] # where to store ascii .txt files
+os.makedirs(output_dir, exist_ok=True)
 
 # List all files in the directory
 files = [f for f in os.listdir(directory) if os.path.isfile(os.path.join(directory, f))]
@@ -59,6 +61,6 @@ sorted_files = sorted(files, key=lambda x: int(re.search(r'\d+', x).group()))
 # Save to ASCII
 i = 1
 for file in sorted_files:
-    image_to_ascii(f"{directory}/{file}", output_path=f"{output_dir}/rick_frame_{i}.txt", new_width=120)
+    image_to_ascii(f"{directory}/{file}", output_path=f"{output_dir}/frame_{i}.txt", new_width=120)
     print(i, file)
     i += 1

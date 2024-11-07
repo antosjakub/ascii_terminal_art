@@ -1,9 +1,10 @@
 import time
 import os
 import re
+import sys
 
-# Specify the directory
-directory = 'ascii'
+# directory containing the ascii txt files:
+directory = sys.argv[1]
 
 # List all files in the directory
 file_list = [f for f in os.listdir(directory) if os.path.isfile(os.path.join(directory, f))]

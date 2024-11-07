@@ -1,2 +1,3 @@
-rick_imgs/
+*_imgs/
 __pycache__/
+*.mp4
