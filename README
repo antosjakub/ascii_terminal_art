@@ -11,6 +11,11 @@
 1) download the video as .mp4
 - use smthg like https://iyoutubetomp4.com/en9/
 
+2) extract audio
+
+    `$ ffmpeg -i out.mp4 -vn -acodec libmp3lame -ac 2 -ab 160k -ar 48000 out.mp3`
+
+
 2) extract the frames as png or jpeg
 - use for example a command line tool like ffmpeg or any online tool
 
