@@ -1,6 +1,6 @@
 # ASCII art in the terminal
 
-![alt text](rick_ascii.png)
+![alt text](rick_roll_20s/rick_ascii.png)
 
 ## steps
 
@@ -18,9 +18,14 @@
 
 2) extract the frames as png or jpeg
 - use for example a command line tool like ffmpeg or any online tool
+- this will populate the current working directory with the .png files
 
     `$ ffmpeg -i input.mp4 %04d.png`
 
-3) run convert_to_ascii.py script
+3) run convert_to_ascii.py script, for example:
 
-3) open a new terminal and run print_to_terminal.py
+    `$ python convert_to_ascii.py rick_roll_20s/images rick_roll_20s/ascii`
+
+4) open a new terminal and run print_to_terminal.py, for example:
+
+    `$ python print_to_term.py rick_roll_20s/`
