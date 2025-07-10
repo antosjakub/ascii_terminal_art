@@ -29,3 +29,16 @@
 4) open a new terminal and run print_to_terminal.py, for example:
 
     `$ python print_to_term.py rick_roll_20s/`
+
+
+## OPTIONAL - setting sound volume on linux:
+
+`amixer sget Master`
+
+`amixer sset Master 50%`
+
+`amixer sset Master 5%+`
+
+`amixer sset Master mute`
+`amixer sset Master unmute`
+`amixer sset Master toggle`
